@@ -9,6 +9,17 @@
   --ring: rgba(15, 118, 110, 0.2);
 }
 
+body.dark {
+  --bg: #0f172a;
+  --ink: #f8fafc;
+  --muted: #cbd5e1;
+  --brand: #14b8a6;
+  --brand-soft: #0f766e;
+  --accent: #fbbf24;
+  --card: #1e293b;
+  --ring: rgba(20, 184, 166, 0.2);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,7 +28,12 @@ body {
   margin: 0;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at top right, #ecfeff 0, #f8fafc 50%, #eef2ff 100%);
+  background: radial-gradient(
+    circle at top right,
+    #ecfeff 0,
+    #f8fafc 50%,
+    #eef2ff 100%
+  );
   line-height: 1.6;
 }
 
@@ -48,6 +64,15 @@ a {
   font-size: 1.2rem;
 }
 
+.github-link {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -56,6 +81,21 @@ a {
 
 .nav-links a {
   color: #e2e8f0;
+}
+
+.toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .hero-content {
@@ -125,7 +165,9 @@ footer {
   border-radius: 0.9rem;
   padding: 1rem;
   box-shadow: 0 10px 30px -20px var(--ring);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .card:hover {
@@ -149,6 +191,36 @@ details {
   border-radius: 0.7rem;
   padding: 0.8rem 1rem;
   margin-bottom: 0.7rem;
+}
+
+.ads-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  background: var(--brand-soft);
+  border-radius: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.ads {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ad-link {
+  background: var(--brand);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.ad-link:hover {
+  background: var(--ink);
 }
 
 footer {
