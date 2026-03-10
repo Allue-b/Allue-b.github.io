@@ -18,6 +18,12 @@ body.dark {
   --accent: #fbbf24;
   --card: #1e293b;
   --ring: rgba(20, 184, 166, 0.2);
+  background: radial-gradient(
+    circle at top right,
+    #0f172a 0,
+    #1e293b 50%,
+    #334155 100%
+  );
 }
 
 * {
